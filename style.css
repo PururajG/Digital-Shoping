@@ -1,0 +1,450 @@
+:root {
+    --blue: rgb(101, 211, 255);
+    --green: rgb(59, 177, 173);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* --------------------------------------- Header section start here---------------------------------------------*/
+.top-arrow {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.top-arrow i {
+    font-size: 35px;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.top-arrow i:hover {
+    transform: scale(1.2);
+}
+
+/* ---------- */
+header {
+    background: url(Images/home\ ps\ copy.jpg) no-repeat;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+
+
+header .header-navbar {
+    width: 100%;
+    /* background: #ffc4a6; */
+    /* display: flex; */
+    /* justify-content: space-between !important; */
+    align-items: center;
+    font-variant: small-caps;
+
+}
+
+.header-navbar .logo {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid black;
+    padding: 0px 2px;
+
+}
+
+.header-navbar .logo a {
+    text-decoration: none;
+}
+
+.header-navbar .logo p {
+    color: rgb(101, 211, 255);
+    letter-spacing: 3px;
+    font-size: 1.8em;
+    font-weight: 700;
+    /* background: #000; */
+}
+
+/* .header-navbar .logo p::after {
+    content: '';
+    background: #0a0a0a;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    left: 0%;
+} */
+
+
+.header-navbar .logo span {
+    color: black;
+    background: #ffc0c0;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 82%;
+    left: 23%;
+
+}
+
+.header-navbar .nav-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.header-navbar .nav-links .active {
+    color: var(--blue) !important;
+
+}
+
+.header-navbar .nav-links ul a {
+    text-decoration: none;
+    color: rgb(0, 0, 0) !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    margin: 3px;
+    display: inline-block;
+    position: relative;
+    top: 10%;
+}
+
+.header-navbar .nav-links ul a::after {
+    content: '';
+    background: var(--blue);
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    transition: all 0.3s;
+}
+
+.header-navbar .nav-links ul a:hover::after {
+    width: 100%;
+}
+
+.header-navbar .nav-links ul a:hover {
+    color: var(--blue) !important;
+    transition: all 0.2s;
+}
+
+.nav-account a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    /* background-color: var(--blue); */
+    border: 1px solid var(--blue);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.nav-account a i {
+    font-size: 1rem;
+}
+
+.nav-account a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: var(--blue);
+    transition: all 0.2s;
+}
+
+/*--------------------------- header contents ---------------------------*/
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+    /* padding-top: 10rem; */
+    /* padding-bottom: 10rem; */
+}
+
+.header-text {
+    width: 50%;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.212); */
+    position: absolute;
+    top: 30%;
+    left: 2%;
+
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    /* font-weight: 800; */
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Source Code Pro', monospace;
+    font-family: 'Recursive', sans-serif;
+}
+
+.header-content h4 {
+    color: rgb(102, 102, 102);
+    font-size: 1em;
+
+}
+
+.header-content .span {
+    color: var(--green);
+    font-size: 1em;
+
+}
+
+.header-content p {
+    color: rgb(111, 111, 111);
+    font-size: 1.09em;
+    margin-top: 2%;
+    /* width: 580px; */
+    /* text-align: center; */
+}
+
+/*.header-content .search-box {
+    /* line-height: 15px; *
+    /* margin: auto;
+    width: 100%; *
+
+    / position: absolute;
+    top: 125%;
+    left: 20%;
+    display: flex;
+    align-items: center; 
+
+}*/
+
+.header-content button {
+    color: #000;
+    font-size: 18px;
+    padding: 8px 15px !important;
+    background: rgba(255, 255, 255, 0) !important;
+    border: 1px solid var(--green) !important;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 2px;
+}
+
+
+.header-content button:hover {
+    background: var(--green) !important;
+    color: #fff;
+}
+
+/* <!----------------------------------------- Shoping section start here---------------------------------------------> */
+
+.shoping-section .card img {
+    height: 250px;
+    width: 100%;
+    border: 1px solid var(--green) !important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.shoping-list {}
+
+
+.subscribe-section {
+    background: url(Images/home\ \(1\).jpg) no-repeat;
+    background-size: cover;
+    height: 50vh;
+    /* position: fixed; */
+    background-attachment: fixed;
+
+}
+
+.subscribe-section2 {
+    background: url(Images/home\ \(6\).jpg) no-repeat;
+    background-size: cover;
+    height: 50vh;
+    /* position: fixed; */
+    background-attachment: fixed;
+
+}
+button{
+    /* background: pink !important; */
+    border: 1px solid pink !important;
+}
+
+button:hover{
+    background: pink !important;
+    border: 1px solid pink;
+}
+
+/* <!------------------------------------ Blog section start here----------------- -------------------> */
+.bolg-section img {
+    height: 250px;
+}
+
+
+
+
+/*-------------------------------- Here the Footer section is strat ------------------------------ */
+
+footer {
+    background-color: rgb(11, 11, 11);
+    height: 50%;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: -5%;
+
+}
+
+.Footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* align-items: center; */
+    padding: 35px 20px;
+    grid-gap: 5px;
+}
+
+.Footer-container ul {
+    list-style: none;
+    text-align: start;
+}
+
+.Footer-container ul p {
+    font-size: 1.3rem;
+}
+
+.Footer-container ul li {
+    padding: 0px 0px !important;
+    font-size: 17px;
+    transition: all 0.2s;
+
+}
+
+.Footer-container ul li:hover {
+    transform: translateX(5px);
+}
+
+
+.Footer-container a {
+    text-decoration: none;
+    color: rgb(148, 148, 148);
+}
+
+.Footer-container a:hover {
+    text-decoration: underline;
+}
+
+
+.social-acc-icon {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+}
+
+.social-acc-icon li {
+    margin: 0px 10px;
+    padding: 0px 10px;
+
+}
+
+.social-acc-icon a {
+    text-decoration: none;
+    color: rgb(174, 174, 174);
+    transition: all 0.2s;
+
+}
+
+.social-acc-icon a i {
+    display: block;
+    color: rgb(178, 178, 178);
+    font-size: 21px;
+}
+
+
+.social-acc-icon a:hover .bi-facebook {
+    color: rgb(23, 132, 255) !important;
+    transform: translatey(-10px);
+
+}
+
+.social-acc-icon a:hover .bi-instagram {
+    color: rgb(255, 49, 67) !important;
+    transform: translatey(-10px);
+
+}
+
+.social-acc-icon a:hover .bi-telegram {
+    color: rgb(23, 182, 255) !important;
+    transform: translatey(-10px);
+
+}
+
+.social-acc-icon a:hover .bi-twitter {
+    color: rgb(79, 161, 255) !important;
+    transform: translatey(-10px);
+
+}
+
+
+
+.copywrite {
+    color: rgba(232, 232, 232, 0.815);
+    padding-bottom: 2%;
+    /* margin-top: -3%; */
+    font-size: 15px;
+}
+
+
+
+
+/* <!----------------------------------------- Shoping page css start here---------------------------------------------> */
+
+.shoping-page-header {
+    background: url(Images/home\ \(5\).jpg) no-repeat;
+    height: 50vh;
+    background-size: 100% 100%;
+}
+
+.shoping-page-header-content {
+
+
+    /*--------------------------- header contents ---------------------------*/
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+    /* padding-top: 10rem; */
+    /* padding-bottom: 10rem; */
+}
+
+.header-text {
+    width: 50%;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.212); */
+    position: absolute;
+    top: 30%;
+    left: 2%;
+
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    /* font-weight: 800; */
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Source Code Pro', monospace;
+    font-family: 'Recursive', sans-serif;
+}
+
+.header-content h4 {
+    color: rgb(102, 102, 102);
+    font-size: 1em;
+
+}
+
+.header-content .span {
+    color: var(--green);
+    font-size: 1em;
+
+}
+

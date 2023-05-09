@@ -1,0 +1,54 @@
+/*------------------- css for Extra large devices (large desktops, 1200px and up)-------------------------------------*/
+
+/* ----------- Header section start here--------------------*/
+@media only screen and (max-width:1200px) {
+
+    /*--------------------------- header contents ---------------------------*/
+
+}
+
+
+
+
+
+/*--------------- -css for Large devices (desktops, 992px and up) --------------------------------*/
+@media only screen and (max-width:992px) {
+
+    /*--------------------------- header contents ---------------------------*/
+}
+
+
+
+
+/*--------------- -css for Medium devices (tablets, 768px and up) --------------------------------*/
+
+@media only screen and (max-width:768px) {
+
+
+    /*--------------------------- header contents ---------------------------*/
+}
+
+
+/*--------------- -css for  Small devices (landscape phones, 576px and up) --------------------------------*/
+@media only screen and (max-width:576px) {
+
+    /*--------------------------- header contents ---------------------------*/
+
+}
+
+
+
+
+
+/*--------------- -css for more Small devices (landscape phones, 380px and up) --------------------------------*/
+
+
+/* ----------- Header section start here--------------------*/
+@media only screen and (max-width:390px) {
+
+    /*--------------------------- header contents ---------------------------*/
+}
+
+
+
+

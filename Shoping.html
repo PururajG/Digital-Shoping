@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>E-commerce Web</title>
+    <link rel="shortcut icon" href="Images/favicon.jpg" type="image/x-icon">
+    <!-- Google fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,300;1,400&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,500;1,700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@800&display=swap" rel="stylesheet">
+    <!------------ Bootstrap 4 css link ------------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!------------ Bootstrap 5 css link ------------>
+
+
+    <!------------ Bootstrap icons link ------------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!-- mangfic popul  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!------------ Custome css link ------------>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Phone.css">
+
+</head>
+<script type="text" src="javascript.js"></script>
+
+<body>
+    <!----------------------------------------- Header section start here--------------------------------------------->
+    <header class="shoping-page-header container-fuild ">
+        <div class="header-navigation">
+            <div class="header-navbar navbar navbar-expand-lg navbar-light ">
+
+                <div class="logo">
+                    <a class="" href="index.html">
+                        <p>Digital</p>
+                        <span>Shoping </span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="nav-links menu-navbar collapse navbar-collapse  p-3" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex space-between  m-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link  ">Home </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="Shoping.html" class="nav-link active ">Shop </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link  ">Blog </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#About" class="nav-link  ">About</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admission
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">ADMISSION & AID</a>
+                            <a class="dropdown-item" href="#">Tuition & Aid</a>
+                            <a class="dropdown-item" href="#">Graduate Admission</a>
+                            <a class="dropdown-item" href="#">Undergraduate Admission</a>
+                            <a class="dropdown-item" href="#">Executive & Professional Admission</a>
+                        </div>
+                    </li> -->
+
+                        <li class="nav-item">
+                            <a href="#Contact" class="nav-link  ">Contact </a>
+                        </li>
+
+
+                    </ul>
+                    <div class="nav-account">
+                        <a href="#"> <i class="bi bi-search"></i></a>
+                        <!-- <a href="#"><i class="bi bi-suit-heart"></i></a> -->
+                        <a href="#"><i class="bi bi-cart3"></i></a>
+                        <a href="#"> <i class="bi bi-person-circle"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="shoping-page-header-content">
+                <div class="header-text">
+                    <h4 class="">Trade<span class="span">-in-</span> Offer.</h4>
+                    <h1 class="">New Arrivals for <br> <span class="span"> Men & Women.</span></h1>
+                    <p>Save more with coupons & up to 70% off!
+                    </p>
+                    <button class="btn  mt-3" onclick="popupform()">Shop Now<i class="bi bi-arrow-right"></i></button>
+
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+
+    <!----------------------------------------- Shoping section start here--------------------------------------------->
+
+    <div class="shoping-section container">
+
+        <div class="text-center mt-5">
+            <h3>Featured Products</h3>
+            <p>Summer Collection</p>
+        </div>
+
+        <div class="shoping-list">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/smart watch.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Watch</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/Shose (1).jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Shoes</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/bag.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Bag</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/googal.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Goggles </h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/Shose (2).jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Shose</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/Watch (6).png" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Watch</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/Home watch.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Home Watch</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/hat.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Hat</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/product-1.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/product-2.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Shirt</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/product-3.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/product-4.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Shirt</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/product-5.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/product-6.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Cout</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/product-7.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Shirt</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/product-8.jpg" class="card-img-top" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title">Shirt</h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <!-- <p class="card-text">This is best Watch for you </p> -->
+                                <a href="#" class="card-link text-danger"><i class="bi-suit-heart"></i></a>
+                            </div>
+                            <span class="card-link">$105</span>
+                            <span class="card-link"><del> $205</del></span> <br>
+
+                            <button type="button" class="btn btn-outline-success mt-3">
+
+                                <a href="Product-details.html" class=" text-dark card-link">Shop Now</a>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-----------------------------------------subscive section Shoping section start here--------------------------------------------->
+
+    <!-- <div class="subscribe-section container-fuild">
+        <div class="subscribe">
+            <img class="fixed-top " width="100%" height="50%" src="Images/home (1).jpg" alt="">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div> -->
+
+
+    <!-----------------------------------------other Shoping section start here--------------------------------------------->
+
+    <!-- <div class="shoping-section container">
+
+        <div class="text-center mt-5">
+            <h3>New Arrivals</h3>
+            <p>Summer Collection new Morden design</p>
+        </div>
+
+
+        <div class="shoping-list">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                
+            </div>
+        </div>
+
+
+    </div>
+ -->
+
+
+
+    <!------------------------------------ Footer section start here----------------- ------------------->
+
+    <footer class="footer ">
+        <div class="Footer-container">
+            <div>
+                <ul class="lists">
+                    <p class="foot-heading">About</p>
+                    <li> <a href="#About "><img src="Images/button.png" alt=""></a></li>
+
+                    <li> <a href="#Home "><i class="bi bi-link-45deg"></i> Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Animi nostrum commodi totam quaerat ab perspiciatis!</a></li>
+                    <!-- <li> <a href="#About "><i class="bi bi-link-45deg"></i>Current Students </a></li>
+                    <li> <a href="#Gallery "><i class="bi bi-link-45deg"></i> Faculty</a></li>
+                    <li> <a href="#Team "><i class="bi bi-link-45deg"></i> Staff</a></li>
+                    <li> <a href="#Contactus"><i class="bi bi-link-45deg"></i> Visitors</a></li> -->
+                </ul>
+
+            </div>
+            <div>
+                <ul class="lists">
+                    <p class="foot-heading">Quick Links </p>
+
+                    <li> <a href="index.html"><i class="bi bi-link-45deg"></i> Home</a></li>
+                    <li> <a href="Shoping.html"><i class="bi bi-link-45deg"></i> Shop</a></li>
+                    <li> <a href="#About "><i class="bi bi-link-45deg"></i> About us</a></li>
+                    <!-- <li> <a href="#Course "><i class="bi bi-link-45deg"></i> Course</a></li>
+                    <li> <a href="#Admission "><i class="bi bi-link-45deg"></i> Admission</a></li>
+                    <li> <a href="#Faculty"><i class="bi bi-link-45deg"></i> Faculty & Staff</a></li>
+                    <li> <a href="#Gallery "><i class="bi bi-link-45deg"></i> Gallery</a></li> -->
+                    <li> <a href="blog.html "><i class="bi bi-link-45deg"></i> Blog</a></li>
+                    <li> <a href="#Contact"><i class="bi bi-link-45deg"></i> Contact us</a></li>
+                </ul>
+                <!-- <li>Reservations
+                    <p>+916395615657</p>
+                </li> -->
+            </div>
+
+            <!-- <div>
+                <ul class="lists">
+                    <p class="foot-heading ">Courses</p>
+                    <li> <a href="#"> Bachelor of Art</a>
+                    </li>
+                    <li> <a href="#">Bachelor of Science </a></li>
+                    <li> <a href="#">Bachelor of com. </a></li>
+                    <li> <a href="#">Bachelor of BA</a></li>
+                    <li> <a href="#">Bachelor of CA</a></li>
+                    <li> <a href="#">Bachelor of Farma</a></li>
+                    <li> <a href="#">D.Farma</a></li>
+                </ul>
+            </div> -->
+
+
+            <div>
+                <ul class="lists">
+                    <p class="foot-heading">Support</p>
+                    <li> <a href="#">Term & Condition</a>
+                    </li>
+                    <li> <a href="#"> Rules & regulation</a></li>
+                    <li> <a href="#"> Health & Safety</a></li>
+
+                    <li> <a href="#"></a></li>
+                </ul>
+            </div>
+
+
+
+            <div>
+                <ul class="lists">
+                    <p class="foot-heading">Connect us</p>
+                    <li> <a href="#"><i class="bi bi-telephone-fill"></i> +91 6395615657</a>
+                    </li>
+                    <li> <a href="#"><i class="bi bi-envelope"></i> pururajsbl20@gmail.com</a></li>
+                    <li> <a href="#"><i class="bi bi-geo-alt-fill"></i> No. 52 In fron of sdm court
+                            sambhal, Utter Predesh 244302</a></li>
+                    <li> <a href="#"></a></li>
+
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div>
+            <ul class="social-acc-icon">
+                <li> <a href="#"><i class="bi bi-facebook"></i>
+                        <!-- facebook -->
+                    </a> </li>
+                <li> <a href="#"> <i class="bi bi-instagram"></i>
+                        <!-- Instagram -->
+                    </a></li>
+                <li> <a href="#"> <i class="bi bi-telegram"></i>
+                        <!-- Telegram -->
+                    </a></li>
+                <li> <a href="#"><i class="bi bi-twitter"></i>
+                        <!-- twitter -->
+                    </a> </li>
+            </ul>
+        </div>
+
+        <p class="copywrite">Copyright &copy; 2023 All rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+    <!-- cdn jss -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- mangfic popul  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!--------------------------- Bootstrap scripts --------------------------->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
