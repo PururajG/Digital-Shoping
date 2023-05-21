@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>E-commerce Web</title>
-    <link rel="shortcut icon" href="Images/favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/DI.png" type="image/x-icon">
     <!-- Google fonts -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,300;1,400&display=swap">
@@ -30,11 +30,11 @@
 
 <body>
     <!----------------------------------------- Header section start here--------------------------------------------->
-    <header class="shoping-page-header container-fuild ">
+    <header class="header container-fuild " id="header">
         <div class="header-navigation">
-            <div class="header-navbar navbar navbar-expand-lg navbar-light ">
+            <div class="header-navbar navbar navbar-expand-lg navbar-light " style="z-index: 99;">
                 <div class="logo">
-                    <a class="" href="index.html">
+                    <a class="" href="Userloged.html">
                         <p>Digital</p>
                         <span class="text-dark">Shoping </span>
                     </a>
@@ -47,23 +47,19 @@
                 <div class="nav-links menu-navbar collapse navbar-collapse  p-3" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex justify-content-arround ">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">Home </a>
+                            <a href="Userloged.html" class="nav-link active ">Home </a>
                         </li>
-
                         <li class="nav-item ">
-                            <a href="Shoping.html" class="nav-link active">Shop </a>
+                            <a href="Shoping.html" class="nav-link  ">Shop </a>
                         </li>
-
                         <li class="nav-item">
-                            <a href="blog.html" class="nav-link">Blog </a>
+                            <a href="blog.html" class="nav-link  ">Blog </a>
                         </li>
-
                         <li class="nav-item">
-                            <a href="About.html" class="nav-link">About</a>
+                            <a href="About.html" class="nav-link  ">About</a>
                         </li>
-
                         <li class="nav-item">
-                            <a href="Contact.html" class="nav-link">Contact </a>
+                            <a href="Contact.html" class="nav-link  ">Contact </a>
                         </li>
                     </ul>
                 </div>
@@ -72,7 +68,8 @@
                     <a href="#" class="nav-acc-search m-1" onclick="showsearchbox()"> <i class="bi bi-search"></i> </a>
                     <a href="#" class="nav-acc-card m-1" onclick="showcardlist()"><i class="bi bi-cart3 "></i> <span
                             class="text-light bg-danger p-1">3</span> </a>
-                    <a href="#" class="nav-acc-user m-1" onclick="showuser()"> <i class="bi bi-person-circle"></i> </a>
+                    <a href="#" class="after-login-nav-acc m-1" onclick="showuser()"> <img src="Images/login.png"
+                            alt=""> </a>
                 </div>
 
                 <!------------ searchbox popup ------------>
@@ -80,6 +77,7 @@
                     <input class=" " type="search" name="" placeholder="Search here." id="searchbox">
                     <i onclick="hidesearchbox()" class="bi bi-x-lg bg-dark text-light"></i>
                 </div>
+
 
                 <!-- when user  loged in here -->
                 <div class="card-list-popup  p-3" id="card-list" style="z-index: 88;">
@@ -157,49 +155,78 @@
                     </div>
                 </div>
 
-                <!------------- user login/ signup button popup------------->
-                <div class="user-login-popup bg-light p-3" id="user">
-                    <div class="text-center">
-                        <h2>
-                            <i class="bi bi-person-fill fa-5x"></i>
+                <script>
+                    const plus = document.querySelector(".plus"),
+                        minus = document.querySelector(".minus"),
+                        num = document.querySelector(".num");
+                    let a = 1;
+                    plus.addEventListener("click", () => {
+
+                        a++;
+                        a = (a < 10) ? "0" + a : a;
+                        num.innerText = a;
+
+                    });
+
+                    minus.addEventListener("click", () => {
+
+                        if (a > 1) {
+                            a--;
+                            a = (a < 10) ? "0" + a : a;
+                            num.innerText = a;
+                        }
+                    });
+                </script>
+
+                <!-- when user  loged in here end-->
+
+
+                <div class="user-login-popup after-login-page-head bg-light p-3" id="user">
+                    <div class="text-start">
+
+                        <h2 class="position-relative right-0">
                             <i onclick="hideuser()" class="bi bi-x"></i>
+
                         </h2>
-                        <button class="btn-outline-info btn-sm" onclick="showloginpopup()">Login</button>
-                        <button class="btn-outline-info btn-sm">Signup</button>
+
+                        <ul class="after-login-profile-list list-unstyled">
+                            <a href="my profile.html" class="">
+                                <li class="px-2 py-1 my-2"> <i class="bi  bi-person-circle mr-2 "></i> My Profile</li>
+                            </a>
+                            <a href="Wishlist.html">
+                                <li class="px-2 py-1 my-2"> <i class="bi bi-heart-fill mr-2"></i>
+                                    Wishlist</li>
+                            </a>
+                            <a href="my order.html">
+                                <li class="px-2 py-1 my-2"> <i class="bi  bi-bag-heart-fill mr-2"></i> My order</li>
+                            </a>
+                            <a href="coupon.html">
+                                <li class="px-2 py-1 my-2"> <i class="bi bi-person-vcard-fill mr-2"></i>
+                                    My Coupons</li>
+                            </a>                            
+                            <a href="#">
+                                <li class="px-2 py-1 my-2"> <i class="bi bi-currency-rupee mr-2"></i> Payment</li>
+                            </a>
+                            <a href="#">
+                                <li class="px-2 py-1 my-2"> <i class="bi bi-gear-fill mr-2"></i> Account Setting</li>
+                            </a>
+                            <a href="index.html">
+                                <li class="px-2 py-1 my-2"> <i class="bi bi-power mr-2"></i>
+                                    Logout </li>
+                            </a>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!---------------------------------- user login form popup   ----------------------------------->
-            <div class="login-popup-form bg-light border border-dark w-50 " id="login-popup">
-                <div class="text-center">
-                    <i onclick="hideloginpopup()" class="bi bi-x-lg bg-light text-danger p-1"></i>
-                    <h5 class="text-danger">Welcome back..</h5>
-                    <hr>
-                </div>
-                <div class="row ">
-                    <div class="col mt-4 ml-5"><img src="Images/logo.png" alt=""></div>
-                    <div class="col mt-4 row-cols-1">
-                        <form action="#">
-                            <label class="mt-1" for="">Enter your Email </label>
-                            <input class="bg-none d-flex  border border-dark" type="email" required>
-                            <label class="mt-4" for="">Enter your password</label>
-                            <input class="bg-none d-flex  border border-dark" type="password" required>
-                            <a class="mt-2" href="#">Forget password.?</a> <br>
-                            <!-- <input class="btn  mt-4 " type="submit" value="Sign in"> -->
-                            <a href="Userloged.html" class="login-popup-submit-btn btn mt-4 ">Sign in </a>
-                        </form>
-                        <p class="mt-2">Dont't have an acount..? <a href="#">Create account.</a></p>
-                    </div>
-                </div>
-            </div>
-            <!--  -------------------------------------- signup form popup end -------------------------------------  -->
-
-            <!-- Shoping page header content -->
-            <div class="shoping-page-header-content">
-                <div class="header-text">
-                    <h1 class="">Shop <span class="span">Now</span></h1>
-                    <p>Save more with coupons & up to 70% off! </p>
+            <!------------- header contents ------------->
+            <div class="header-content" id="user">
+                <div class="header-text text-center w-50 ">
+                    <h4 class=" text-secondary">Trade<span class="span">-in-</span> Offer.</h4>
+                    <p class="mt-4 text-secondary">Save more with coupons & up to 70% off! </p>
+                    <h1 class="">New Arrivals for <br> <span class="span"> Men & Women.</span></h1>
+                    <button class="btn btn-info text-light  mt-5" onclick="popupform()">Shop Now<i
+                            class="bi bi-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -209,7 +236,7 @@
 
     <div class="shoping-section container">
 
-        <div class="text-center mt-3">
+        <div class="text-center mt-5">
             <h3>Featured Products</h3>
             <p>Summer Collection</p>
         </div>
@@ -573,57 +600,459 @@
                         </div>
                     </div>
                 </div>
-
-                
             </div>
         </div>
+        <div class="text-center mt-5"> <a href="Shoping.html"> <button class="btn btn-outline-info ">More
+                    Products</button></a></div>
 
     </div>
 
-    <div class="text-center mt-5 ">
 
-        <button class="btn btn-outline-success btn-sm" onclick="chengeproducts()">1</button>
-        <button class="btn btn-outline-success btn-sm" onclick="chengeproducts()">2 </button>
-        <button class="btn btn-outline-success btn-sm" onclick="chengeproducts()">3 </button>
-        <button class="btn btn-outline-success btn-sm">... </button>
-    </div>
-
-    <script>
-        function chengeproducts() {
-
-        }
-    </script>
     <!-----------------------------------------subscive section Shoping section start here--------------------------------------------->
 
-    <!-- <div class="subscribe-section container-fuild">
+    <div class="subscribe-section container-fuild mt-5">
         <div class="subscribe">
-            <img class="fixed-top " width="100%" height="50%" src="Images/home (1).jpg" alt="">
-            <p>Lorem ipsum dolor sit amet.</p>
+            <!-- <img class="fixed-top " width="100%" height="50%" src="Images/home (1).jpg" alt=""> -->
+            <!-- <p>Lorem ipsum dolor sit amet.</p> -->
         </div>
-    </div> -->
+    </div>
 
 
     <!-----------------------------------------other Shoping section start here--------------------------------------------->
 
-    <!-- <div class="shoping-section container">
+    <div class="shoping-section container">
 
         <div class="text-center mt-5">
             <h3>New Arrivals</h3>
             <p>Summer Collection new Morden design</p>
         </div>
 
-
         <div class="shoping-list">
+            <div class="row  g-5 my-5">
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (1).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html"> Fancy Men Shirt</a>
+                            </h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                            <div class="card-img-overlay new-text"><p ><span class="text-white bg-danger my-2 p-2">New</span></p></div>
 
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                
+                            <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-md-4 col-lg-3 ">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (2).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html"> T-Shirt</a></h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                            <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-md-4 col-lg-3 ">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (3).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html">Short Pent</a></h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                            <div class="card-img-overlay new-text "><span class="text-white bg-danger my-2 p-2">New</span></div>
+                         <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (4).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html"> Kurta Shirt</a></h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                           <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-md-4 col-lg-3 ">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (5).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html">Shirt</a></h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                            <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-md-4 col-lg-3 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (6).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html"> Kurta Shirt</a></h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                            <div class="card-img-overlay new-text"><span class="text-white bg-danger my-2 p-2">New</span></div>
+                         <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-md-4 col-lg-3 ">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (7).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html">Jeans Shirt</a>
+                            </h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                            <div class="card-img-overlay new-text"><span class="text-white bg-danger my-2 p-2">New</span></div>
+                        <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-md-4 col-lg-3 ">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (8).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html">Fancy Shirt</a></h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                            <div class="card-img-overlay new-text"><span class="text-white bg-danger my-2 p-2">New</span></div>
+                          <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-md-4 col-lg-3 ">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (9).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html">T-Shirt</a></h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                            <div class="card-img-overlay new-text"><span class="text-white bg-danger my-2 p-2">New</span></div>
+                             <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-md-4 col-lg-3 ">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (10).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html">Fancy T-Shirt</a></h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                            <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-md-4 col-lg-3 ">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (11).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html">Men T-Shirt</a></h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                            <div class="card-img-overlay new-text"><span class="text-white bg-danger my-2 p-2">New</span></div>
+                         <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-md-4 col-lg-3 ">
+                    <div class="card">
+                        <img class="card-img-top" src="Images/product (12).jpg" alt="Loading image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a class="text-dark" href="Product-details.html">Men Shirt</a></h5>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-info"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class=" bi bi-star-half"></i></p>
+                                <a href="Product-details.html" class="card-link text-danger"><i
+                                        class="bi-suit-heart"></i></a>
+                            </div>
+                         <div class="card-img-overlay product-hover-icons ">
+                                <div class="row">
+                                    <a title="Quick View" class="m-1 p-2" href="Product-details.html"><i class="bi bi bi-eye"></i></a>
+                                    <a title="Like" class="m-1 p-2" href="Product-details.html"><i class="bi bi-suit-heart"></i></a>
+                                    <a title="Add to cart" class="m-1 p-2" href="Product-details.html"><i class="bi bi-cart4"></i></a>
+                                </div>
+                            </div>
+                            <span class="card-link">Rs 105</span>
+                            <span class="card-link"><del> Rs 205</del></span> <br>
+                            <div class="d-flex buy-button justify-content-between mt-4">
+                                <a href="Product-details.html" class="btn btn-primary">Buy Now</a>
+                                <a href="Product-details.html" class="btn btn-warning ">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
     </div>
- -->
 
+
+
+    <!-----------------------------------------subscive section Shoping section start here--------------------------------------------->
+
+    <!-- <div class="subscribe-section2 container-fuild">
+        <div class="subscribe2">
+            <img class="fixed-top " width="100%" height="50%" src="Images/home (1).jpg" alt="">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div> -->
+
+
+
+    <!------------------------------------ Blog section start here----------------- ------------------->
+
+    <!-- <div class="bolg-section">
+
+        <div class="text-center mt-5">
+            <h3>Our Blog</h3>
+            <p>Lettest news</p>
+        </div>
+
+        <div class="card-group container">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="Images/blog (1).jpg" class="card-img-top" alt="loading image">
+                    <div class="card-body">
+                        <h5 class="card-title">20 Top products</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+                            reprehenderit!
+                        </p>
+                        <a href="blog.html" class="btn btn-info">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="Images/blog (2).jpg" class="card-img-top" alt="loading image">
+                    <div class="card-body">
+                        <h5 class="card-title">20 Top products</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+                            reprehenderit!
+                        </p>
+                        <a href="blog.html" class="btn btn-info">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="Images/blog (3).jpg" class="card-img-top" alt="loading image">
+                    <div class="card-body">
+                        <h5 class="card-title">20 Top products</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+                            reprehenderit!
+                        </p>
+                        <a href="blog.html" class="btn btn-info">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
 
     <!------------------------------------ Footer section start here----------------- ------------------->
@@ -633,7 +1062,7 @@
             <div>
                 <ul class="lists">
                     <p class="foot-heading">About</p>
-                    <p> <a href="#About "><img src="Images/button.png" alt=""></a></p>
+                    <p> <a href="index.html"><img src="Images/button.png" alt=""></a></p>
 
                     <li> <a href="#Home "> Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Animi nostrum commodi totam quaerat ab perspiciatis!</a></li>
@@ -683,8 +1112,8 @@
                     <p class="foot-heading">Support</p>
                     <li> <a href="#"><i class="bi bi-link-45deg"></i> Term & Condition</a>
                     </li>
-                    <li> <a href="#"> <i class="bi bi-link-45deg"></i> Rules & regulation</a></li>
-                    <li> <a href="#"> <i class="bi bi-link-45deg"></i> Health & Safety</a></li>
+                    <li> <a href="#"><i class="bi bi-link-45deg"></i> Rules & regulation</a></li>
+                    <li> <a href="#"><i class="bi bi-link-45deg"></i> Health & Safety</a></li>
 
                     <li> <a href="#"></a></li>
                 </ul>
@@ -748,6 +1177,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+
+
 </body>
 
 </html>

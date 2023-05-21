@@ -28,13 +28,13 @@
 
 </head>
 
-<body>
+<body class="profile-page-body">
     <!----------------------------------------- Header section start here--------------------------------------------->
-    <header class="blog-page-header container-fuild ">
+    <header class=" container-fuild " id="header">
         <div class="header-navigation">
-            <div class="header-navbar navbar navbar-expand-lg navbar-light ">
+            <div class="header-navbar profile-navbar navbar navbar-expand-lg navbar-light " style="z-index: 99;">
                 <div class="logo">
-                    <a class="" href="index.html">
+                    <a class="" href="Userloged.html">
                         <p>Digital</p>
                         <span class="text-dark">Shoping </span>
                     </a>
@@ -44,26 +44,22 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="nav-links menu-navbar collapse navbar-collapse  p-3" id="navbarSupportedContent">
+                <div class="nav-links   menu-navbar collapse navbar-collapse  p-3" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex justify-content-arround ">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">Home </a>
+                            <a href="Userloged.html" class="nav-link active ">Home </a>
                         </li>
-
-                        <li class="nav-item ">
-                            <a href="Shoping.html" class="nav-link ">Shop </a>
+                        <li class="nav-item dropmenu">
+                            <a href="Shoping.html" class="nav-link  ">Shop </a>
                         </li>
-
                         <li class="nav-item">
-                            <a href="blog.html" class="nav-link active">Blog </a>
+                            <a href="blog.html" class="nav-link  ">Blog </a>
                         </li>
-
                         <li class="nav-item">
-                            <a href="About.html" class="nav-link">About</a>
+                            <a href="About.html" class="nav-link  ">About</a>
                         </li>
-
                         <li class="nav-item">
-                            <a href="Contact.html" class="nav-link">Contact </a>
+                            <a href="Contact.html" class="nav-link  ">Contact </a>
                         </li>
                     </ul>
                 </div>
@@ -72,14 +68,19 @@
                     <a href="#" class="nav-acc-search m-1" onclick="showsearchbox()"> <i class="bi bi-search"></i> </a>
                     <a href="#" class="nav-acc-card m-1" onclick="showcardlist()"><i class="bi bi-cart3 "></i> <span
                             class="text-light bg-danger p-1">3</span> </a>
-                    <a href="#" class="nav-acc-user m-1" onclick="showuser()"> <i class="bi bi-person-circle"></i> </a>
+                    <a href="#" class="after-login-nav-acc m-1" onclick="showuser()"> <img src="Images/login.png"
+                            alt=""> </a>
                 </div>
+
+                <!---------- --------custom javascript link here-------- ---------->
+                <script text="javascript" src="myjava.js"></script>
 
                 <!------------ searchbox popup ------------>
                 <div class="searchbox" id="searchbox">
                     <input class=" " type="search" name="" placeholder="Search here." id="searchbox">
                     <i onclick="hidesearchbox()" class="bi bi-x-lg bg-dark text-light"></i>
                 </div>
+
 
                 <!-- when user  loged in here -->
                 <div class="card-list-popup  p-3" id="card-list" style="z-index: 88;">
@@ -157,124 +158,179 @@
                     </div>
                 </div>
 
-                <!------------- user login/ signup button popup------------->
-                <div class="user-login-popup bg-light p-3" id="user">
-                    <div class="text-center">
-                        <h2>
-                            <i class="bi bi-person-fill fa-5x"></i>
+                <script>
+                    const plus = document.querySelector(".plus"),
+                        minus = document.querySelector(".minus"),
+                        num = document.querySelector(".num");
+                    let a = 1;
+                    plus.addEventListener("click", () => {
+
+                        a++;
+                        a = (a < 10) ? "0" + a : a;
+                        num.innerText = a;
+
+                    });
+
+                    minus.addEventListener("click", () => {
+
+                        if (a > 1) {
+                            a--;
+                            a = (a < 10) ? "0" + a : a;
+                            num.innerText = a;
+                        }
+                    });
+                </script>
+
+                <!-- when user  loged in here end-->
+
+
+                <div class="user-login-popup after-login-page-head bg-light p-3" id="user">
+                    <div class="text-start">
+
+                        <h2 class="position-relative right-0">
                             <i onclick="hideuser()" class="bi bi-x"></i>
+
                         </h2>
-                        <button class="btn-outline-info btn-sm" onclick="showloginpopup()">Login</button>
-                        <button class="btn-outline-info btn-sm">Signup</button>
-                    </div>
-                </div>
-            </div>
 
-            <!---------------------------------- user login form popup   ----------------------------------->
-            <div class="login-popup-form bg-light border border-dark w-50 " id="login-popup">
-                <div class="text-center">
-                    <i onclick="hideloginpopup()" class="bi bi-x-lg bg-light text-danger p-1"></i>
-                    <h5 class="text-danger">Welcome back..</h5>
-                    <hr>
-                </div>
-                <div class="row ">
-                    <div class="col mt-4 ml-5"><img src="Images/logo.png" alt=""></div>
-                    <div class="col mt-4 row-cols-1">
-                        <form action="#">
-                            <label class="mt-1" for="">Enter your Email </label>
-                            <input class="bg-none d-flex  border border-dark" type="email" required>
-                            <label class="mt-4" for="">Enter your password</label>
-                            <input class="bg-none d-flex  border border-dark" type="password" required>
-                            <a class="mt-2" href="#">Forget password.?</a> <br>
-                            <!-- <input class="btn  mt-4 " type="submit" value="Sign in"> -->
-                            <a href="Userloged.html" class="login-popup-submit-btn btn mt-4 ">Sign in </a>
-                        </form>
-                        <p class="mt-2">Dont't have an acount..? <a href="#">Create account.</a></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog page header conntent -->
-            <div class="blog-page-header-content">
-                <div class="header-text">
-                    <h1 class="">Our <span class="span">Blog </span></h1>
-                    <p>Lettest news & reviews</p>
+                        <ul class="after-login-profile-list list-unstyled">
 
+                            <a href="my profile.html" class="">
+                                <li class="px-2 py-1 my-2"> <i class="bi  bi-person-circle mr-2 "></i> My Profile</li>
+                            </a>
+                            <a href="Wishlist.html">
+                                <li class="px-2 py-1 my-2"> <i class="bi bi-heart-fill mr-2"></i>
+                                    Wishlist</li>
+                            </a>
+                            <a href="my order.html">
+                                <li class="px-2 py-1 my-2"> <i class="bi  bi-bag-heart-fill mr-2"></i> My order</li>
+                            </a>
+                            <a href="coupon.html">
+                                <li class="px-2 py-1 my-2"> <i class="bi bi-person-vcard-fill mr-2"></i>
+                                    My Coupons</li>
+                            </a>                            
+                            <a href="payment.html">
+                                <li class="px-2 py-1 my-2"> <i class="bi bi-currency-rupee mr-2"></i> Payment</li>
+                            </a>
+                            <a href="setting.html">
+                                <li class="px-2 py-1 my-2"> <i class="bi bi-gear-fill mr-2"></i> Account Setting</li>
+                            </a>
+                            <a href="index.html">
+                                <li class="px-2 py-1 my-2"> <i class="bi bi-power mr-2"></i>
+                                    Logout </li>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!------------------------------------ Blog section start here----------------- ------------------->
-    <div class="bolg-section">
-        <div class="container mt-5">
-            <div class="row  mt-5 ">
-                <div class="card col-12 p-3 border-0">
-                    <div class="row g-0">
-                        <div class="col-md-6 mt-4">
-                            <img src="Images/blog (1).jpg" class="card-img-top img-fluid rounded-start"
-                                alt="loading image" style="object-fit: cover; height: 60%;">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-body">
-                                <h5 class="card-title"> Best Clothes</h5>
-                                <p class="card-text">We are providing the best clothes dolor sit amet consectetur adipisicing elit.
-                                    Consequuntur eos maiores modi numquam saepe iste vel sequi id omnis, labore vitae
-                                    sit voluptatibus exercitationem porro recusandae expedita at!
-                                </p>
-                                <h5 class="text-warning"><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-half"></i></h5>
-                               
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatem explicabo, atque rerum consectetur a nobis ullam modi.</p>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui nam eum officia quas repudiandae explicabo? Aliquam quis impedit hic molestias est quidem sint. Facere temporibus dicta quis dolores reprehenderit nihil doloremque, at harum voluptates aperiam provident repellendus dignissimos consequatur suscipit praesentium eum dolor unde deserunt iste asperiores? Eum, nesciunt aperiam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. At dolorem quia perferendis inventore beatae eaque quod, minus ex? Expedita tempore quo, dicta inventore eos facilis, officia voluptate cum alias repellat, magnam laboriosam praesentium asperiores saepe nulla quisquam incidunt libero nemo ullam laudantium. Sapiente nihil, vitae molestias officiis ipsum aliquid expedita.</p>
-                            </div>
+    <div class="mx-5 my-3 profile-page-details">
+        <div class="row ">
+            <div class="left-side-nav col-3 ">
+                <div class="left-side ">
+                    <div class="row bg-light user-profile py-2 px-3  ">
+                        <img src="Images/login.png" alt="">
+                        <div class="col-9 align-center text-start">
+                            <p> Hello, <br> <strong> Rohan Kumar</strong></p>
                         </div>
                     </div>
 
-                </div>
-              
-
-                <!-- <div class="card col-12 mt-5">
-                    <div class="row g-0">
-                        <div class="col-md-6">
-                            <img src="Images/blog (2).jpg" class="card-img-top img-fluid rounded-start"
-                                alt="loading image" style="object-fit: cover;">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-body">
-                                <h5 class="card-title">20 Top products</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-                                    reprehenderit!
-                                </p>
-                                <a href="#" class="btn btn-info">Read more</a>
-                            </div>
-                        </div>
+                    <div class="row profile-left-nav-list mt-2 bg-light ">
+                        <ul class="list-unstyled  py-2 px-3 ">
+                            <a href="my profile.html" class="">
+                                <li class="px-2 py-1 my-1 active1"> <i class="bi  bi-person-circle mr-2 "></i> MY
+                                    PROFILE</li>
+                            </a>
+                            <a href="Wishlist.html">
+                                <li class="px-2 py-1 my-1"> <i class="bi bi-heart-fill mr-2"></i>
+                                    My Wishlist</li>
+                            </a>
+                            <a href="my order.html">
+                                <li class="px-2 py-1 my-1"> <i class="bi  bi-bag-heart-fill mr-2"></i> MY ORDERS</li>
+                            </a>
+                            <a href="coupon.html">
+                                <li class="px-2 py-1 my-1"> <i class="bi bi-person-vcard-fill mr-2"></i>
+                                    My Coupons</li>
+                            </a>                            
+                            <a href="payment.html">
+                                <li class="px-2 py-1 my-1"> <i class="bi bi-currency-rupee mr-2"></i> PAYMENTS</li>
+                            </a>
+                            <a href="setting.html">
+                                <li class="px-2 py-1 my-1"> <i class="bi bi-gear-fill mr-2"></i> ACCOUNT SETTINGS</li>
+                            </a>
+                            <a href="index.html">
+                                <li class="px-2 py-1 my-1"> <i class="bi bi-power mr-2"></i>
+                                    LOGOUT</li>
+                            </a>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="card col-12 mt-5">
-                    <div class="row g-0">
-                        <div class="col-md-6">
-                            <img src="Images/blog (3).jpg" class="card-img-top img-fluid rounded-start"
-                                alt="loading image" style="object-fit: cover;">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-body">
-                                <h5 class="card-title">20 Top products</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-                                    reprehenderit!
-                                </p>
-                                <a href="#" class="btn btn-info">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
+
+            <!-------------------------------- Here the main user right profile section is start -------------------------------->
+            <div class="col-8 right-side-content ">
+
+                <div class="user-profile-right px-4 py-3 bg-light" id="My Profile">
+
+                    <div class="user-profile-content">
+                        <div class="user-profile-header d-flex justify-content-between">
+                            <h4>Profile information</h4>
+                            <p onclick="enable()" class=" text-primary" style="cursor: pointer;">
+                                <i class="bi bi-pencil"></i>
+                                Edit all
+                            </p>
+                        </div>
+                        <hr>
+
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-5">
+                                <label for="validationCustom01" class="form-label "><strong>First Name:</strong></label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="Rohan"
+                                    autocomplete="off">
+
+                            </div>
+                            <div class="col-md-5">
+                                <label for="validationCustom02" class="form-label"><strong>Last Name:</strong></label>
+                                <input type="text" class="form-control" id="validationCustom02" placeholder="Kumar"
+                                    autocomplete="off">
+                            </div>
+
+                            <div class="col-md-5 mt-4">
+                                <label for="validationCustom03" class="form-label"><strong>Email:</strong></label>
+                                <input type="text" class="form-control" id="validationCustom03"
+                                    placeholder="abc@gmail.com">
+                            </div>
+
+                            <div class="col-md-5 mt-4">
+                                <label for="validationCustom03" class="form-label"><strong>Password:</strong></label>
+                                <input type="password" class="form-control" id="validationCustom03"
+                                    placeholder="12345678">
+                            </div>
+
+                            <div class="col-md-8 mt-4">
+                                <label for="validationCustom04" class="form-label"><strong> Address:</strong></label>
+                                <input type="text" class="form-control" id="validationCustom04 "
+                                    placeholder="In front of SDM court Sambhal, Utter Predesh, 244302">
+                            </div>
+
+                        </form>
+                        <div class="user-profile-header d-flex justify-content-between mt-4">
+                            <h4>Contact Details</h4>
+
+                        </div>
+                        <hr>
+                        <div class="col-md-4">
+                            <label for="validationCustom06" class="form-label"><strong>Contact Number:</strong></label>
+                            <input type="tel" class="form-control" id="validationCustom06" placeholder="+91 9999999999">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-
-
     </div>
-
-
-
     <!------------------------------------ Footer section start here----------------- ------------------->
 
     <footer class="footer ">
@@ -282,9 +338,9 @@
             <div>
                 <ul class="lists">
                     <p class="foot-heading">About</p>
-                    <p> <a href="#About "><img src="Images/button.png" alt=""></a></p>
+                    <p> <a href="Userloged.html"><img src="Images/button.png" alt=""></a></p>
 
-                    <li> <a href="#Home ">Lorem ipsum dolor sit amet consectetur
+                    <li> <a href="#Home "> Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Animi nostrum commodi totam quaerat ab perspiciatis!</a></li>
                     <!-- <li> <a href="#About "><i class="bi bi-link-45deg"></i>Current Students </a></li>
                     <li> <a href="#Gallery "><i class="bi bi-link-45deg"></i> Faculty</a></li>
@@ -297,7 +353,7 @@
                 <ul class="lists">
                     <p class="foot-heading">Quick Links </p>
 
-                    <li> <a href="index.html"><i class="bi bi-link-45deg"></i> Home</a></li>
+                    <li> <a href="Userloged.html"><i class="bi bi-link-45deg"></i> Home</a></li>
                     <li> <a href="Shoping.html"><i class="bi bi-link-45deg"></i> Shop</a></li>
                     <li> <a href="#About "><i class="bi bi-link-45deg"></i> About us</a></li>
                     <!-- <li> <a href="#Course "><i class="bi bi-link-45deg"></i> Course</a></li>
@@ -378,8 +434,9 @@
     </footer>
 
 
-    <!--------------------------------- Custom js file link --------------------------------------------------->
-    <script text="javascript" src="myjava.js"></script>
+
+
+
 
     <!-- cdn jss -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -395,6 +452,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+
+
 </body>
 
 </html>

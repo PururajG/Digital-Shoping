@@ -1,8 +1,14 @@
+/* ========== Google Fonts =========== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
 :root {
     --blue: rgb(101, 211, 255);
     --green: rgb(59, 177, 173);
 }
-
 
 * {
     margin: 0;
@@ -11,48 +17,26 @@
 
 }
 
+
 /* --------------------------------------- Header section start here---------------------------------------------*/
-.top-arrow {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-}
-
-.top-arrow i {
-    font-size: 35px;
-    color: var(--blue);
-    cursor: pointer;
-}
-
-.top-arrow i:hover {
-    transform: scale(1.2);
-}
-
 /* ---------- */
-header {
+.header {
     background: url(Images/home\ ps\ copy.jpg) no-repeat;
     height: 100vh;
     background-size: 100% 100%;
 }
 
-
-
 header .header-navbar {
-    width: 100%;
     /* background: #ffc4a6; */
-    /* display: flex; */
-    /* justify-content: space-between !important; */
-    align-items: center;
-    font-variant: small-caps;
-
+    font-family: ' Script Swash Caps', cursive, Arial, Helvetica, sans-serif;
 }
 
 .header-navbar .logo {
     cursor: pointer;
     position: relative;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
     padding: 0px 2px;
-
+    font-variant: small-caps;
 }
 
 .header-navbar .logo a {
@@ -60,44 +44,27 @@ header .header-navbar {
 }
 
 .header-navbar .logo p {
-    color: rgb(101, 211, 255);
+    color: rgb(220, 47, 47);
     letter-spacing: 3px;
     font-size: 1.8em;
     font-weight: 700;
-    /* background: #000; */
 }
 
-/* .header-navbar .logo p::after {
-    content: '';
-    background: #0a0a0a;
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    top: 60%;
-    left: 0%;
-} */
-
-
 .header-navbar .logo span {
-    color: black;
     background: #ffc0c0;
     font-size: 12px;
-    text-align: center;
     letter-spacing: 3px;
     position: absolute;
     top: 82%;
     left: 23%;
-
-}
-
-.header-navbar .nav-links ul {
-    display: flex;
-    list-style: none;
 }
 
 .header-navbar .nav-links .active {
-    color: var(--blue) !important;
+    color: rgb(255, 255, 255) !important;
+}
 
+.header-navbar .nav-links ul {
+    margin-left: 5rem;
 }
 
 .header-navbar .nav-links ul a {
@@ -105,14 +72,14 @@ header .header-navbar {
     color: rgb(0, 0, 0) !important;
     font-size: 20px;
     font-weight: 500;
-    padding: 10px;
+    padding: 5px;
     margin: 3px;
-    display: inline-block;
-    position: relative;
-    top: 10%;
+    /* position: relative;
+    top: 10%; */
+    font-variant: small-caps;
 }
 
-.header-navbar .nav-links ul a::after {
+/* .header-navbar .nav-links ul a::after {
     content: '';
     background: var(--blue);
     height: 2px;
@@ -125,20 +92,20 @@ header .header-navbar {
 
 .header-navbar .nav-links ul a:hover::after {
     width: 100%;
-}
+} */
 
 .header-navbar .nav-links ul a:hover {
-    color: var(--blue) !important;
+    color: white !important;
     transition: all 0.2s;
 }
 
 .nav-account a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    /* background-color: var(--blue); */
     border: 1px solid var(--blue);
     padding: 8px;
     border-radius: 5px;
+    position: relative;
 }
 
 .nav-account a i {
@@ -152,72 +119,282 @@ header .header-navbar {
     transition: all 0.2s;
 }
 
-/*--------------------------- header contents ---------------------------*/
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    height: 100vh;
-    /* padding-top: 10rem; */
-    /* padding-bottom: 10rem; */
+.nav-account span {
+    font-size: 0.768rem;
+    position: absolute;
+    top: -15px;
 }
 
+/* <!----------------------------------------- search box popup start here---------------------------------------------> */
+.searchbox {
+    position: absolute;
+    top: 80px;
+    right: 7px;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px black;
+}
+
+.searchbox input {
+    width: 250px;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.searchbox i {
+    padding: 7px 13px;
+    font-size: 18px;
+    margin-left: -5px;
+    transition: all 0.2s;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.searchbox i:hover {
+    background: #939393 !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.searchbox i,
+.card-list-popup i,
+.total-price button,
+.user-login-popup i,
+.user-login-popup button {
+    cursor: pointer;
+}
+
+/* <!----------------------------------------- My cart popup start here---------------------------------------------> */
+.card-list-popup {
+    height: 80vh;
+    width: 20rem;
+    background: #f3f3f3;
+    position: absolute;
+    top: 80px;
+    right: 7px;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 2px black;
+}
+
+.card-list-Container .card-head {
+    background: pink;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-head i {
+    font-size: 1.4rem;
+}
+
+.card-head i:hover {
+    color: rgb(255, 0, 208) !important;
+}
+
+.card-list-item {
+    box-shadow: 0px 1px 3px 0px rgb(142, 142, 142);
+}
+
+.card-list-item img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.card-list-item div>i:hover {
+    color: rgb(230, 137, 137);
+}
+
+.card-quantity {
+    width: 28.5% !important;
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin: 2px !important;
+}
+
+.card-quantity :where(input, button) {
+    border: none;
+    outline: none;
+    font-size: 0.999rem;
+}
+
+.card-quantity button {
+    background-color: #efefef;
+    cursor: pointer;
+    border: 1px solid rgb(233, 233, 233);
+}
+
+.card-quantity button:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+
+.card-quantity button:hover {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+/* <!-----------------------------------------  user login/ signup popup start here---------------------------------------------> */
+.user-login-popup {
+    position: absolute;
+    top: 80px;
+    right: 7px;
+    width: 250px;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+}
+
+/* <!---------------------------------------------------user login form popup start ---------------------------------------------------> */
+.login-popup-form {
+    height: 400px;
+    width: 450px;
+    padding: 10px 10px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px black;
+    z-index: 88;
+    display: none;
+}
+
+.login-popup-form img {
+    height: 220px !important;
+    width: 220px !important;
+}
+
+.login-popup-form i {
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.login-popup-form i:hover {
+    background-color: #f61212 !important;
+    color: white !important;
+}
+
+.login-popup-form form label {
+    font-size: 0.888rem;
+}
+
+.login-popup-form form input {
+    outline: none;
+    padding: 2px 15px;
+    border-radius: 30px;
+}
+
+.login-popup-submit-btn {
+    border: 1px solid rgb(216, 42, 255);
+    color: #000000;
+    margin-left: 60px;
+}
+
+.login-popup-submit-btn:hover {
+    background-color: rgb(240, 126, 255);
+    color: #fff;
+}
+
+.login-popup-form p {
+    font-size: 0.866rem;
+}
+
+/* <!---------------------------------------- signup form popup end ---------------------------------------> */
+.sign-popup-form {
+    height: 400px;
+    width: 450px;
+    padding: 10px 10px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px black;
+    z-index: 88;
+    display: none;
+}
+
+.sign-popup-form img {
+    height: 220px !important;
+    width: 220px !important;
+}
+
+.sign-popup-form i {
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sign-popup-form i:hover {
+    background-color: #f61212 !important;
+    color: white !important;
+}
+
+.sign-popup-form form label {
+    font-size: 0.888rem;
+}
+
+.sign-popup-form form input {
+    outline: none;
+    padding: 2px 15px;
+    border-radius: 30px;
+}
+
+.sign-popup-submit-btn {
+    border: 1px solid rgb(216, 42, 255);
+    color: #000000;
+    margin-left: 60px;
+}
+
+.sign-popup-submit-btn:hover {
+    background-color: rgb(240, 126, 255);
+    color: #fff;
+}
+
+.sign-popup-form p {
+    font-size: 0.866rem;
+}
+
+/*--------------------------- header contents ---------------------------*/
 .header-text {
-    width: 50%;
-    text-align: center;
-    /* background: rgba(0, 0, 0, 0.212); */
     position: absolute;
     top: 30%;
     left: 2%;
-
 }
 
 .header-content h1 {
     font-size: 2.8rem;
-    /* font-weight: 800; */
     font-family: 'Roboto Mono', monospace;
     font-family: 'Source Code Pro', monospace;
     font-family: 'Recursive', sans-serif;
 }
 
 .header-content h4 {
-    color: rgb(102, 102, 102);
     font-size: 1em;
-
 }
 
 .header-content .span {
     color: var(--green);
     font-size: 1em;
-
 }
 
 .header-content p {
-    color: rgb(111, 111, 111);
     font-size: 1.09em;
-    margin-top: 2%;
-    /* width: 580px; */
-    /* text-align: center; */
 }
 
-/*.header-content .search-box {
-    /* line-height: 15px; *
-    /* margin: auto;
-    width: 100%; *
-
-    / position: absolute;
-    top: 125%;
-    left: 20%;
-    display: flex;
-    align-items: center; 
-
-}*/
-
 .header-content button {
-    color: #000;
     font-size: 18px;
     padding: 8px 15px !important;
-    background: rgba(255, 255, 255, 0) !important;
     border: 1px solid var(--green) !important;
     border-radius: 5px;
     cursor: pointer;
@@ -225,63 +402,120 @@ header .header-navbar {
     letter-spacing: 2px;
 }
 
-
 .header-content button:hover {
     background: var(--green) !important;
     color: #fff;
 }
 
-/* <!----------------------------------------- Shoping section start here---------------------------------------------> */
 
-.shoping-section .card img {
-    height: 250px;
-    width: 100%;
-    border: 1px solid var(--green) !important;
-    display: flex;
-    align-items: center;
-    text-align: center;
+
+/* <!----------------------------------------- Shoping section start here---------------------------------------------> */
+/* .shoping-section{
+    background: url(Images/home\ \(5\).jpg) no-repeat;
+    background-size: 100% 100%;
+} */
+
+.shoping-list .card:hover {
+    cursor: pointer;
 }
 
-.shoping-list {}
+.shoping-list .card img {
+    height: 250px;
+    /* width: 250px; */
+    border: 1px solid rgb(211, 211, 211) !important;
+    /* display: flex;
+    align-items: center;
+    text-align: center; */
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-hover-icons div {
+    position: absolute;
+    right: 0;
+    /* background: #000; */
+    color: white;
+}
+
+.new-text {
+    height: 100px;
+    width: 100px;
+}
+
+.product-hover-icons {
+    position: absolute;
+    top: 20%;
+    left: -25%;
+    height: fit-content;
+    width: 100%;
+
+}
+
+.product-hover-icons a {
+    border-radius: 50%;
+    background: #effffc;
+    display: none;
+    transition: all 0.2s;
+    color: #000;
+
+}
+
+.product-hover-icons a i {
+    /* display: none ; */
+    /* background: #000; */
+    font-size: 1.5rem;
+}
+
+.product-hover-icons a:hover {
+    background: rgb(109, 196, 192);
+    color: white !important;
+
+}
+
+.shoping-list .card:hover .product-hover-icons a {
+    display: block;
+    /* transition: all 3s; */
+}
+
+/* .shoping-list .card:hover .shoping-list .card img {
+    transform: scale(1.5) !important;
+} */
+
+.shoping-list button {
+    /* background: pink !important; */
+    border: 1px solid pink !important;
+}
+
+.shoping-list button:hover {
+    background: pink !important;
+    border: 1px solid pink;
+}
 
 
 .subscribe-section {
-    background: url(Images/home\ \(1\).jpg) no-repeat;
+    background: url(Images/Addvertising\ 1.png) no-repeat;
     background-size: cover;
     height: 50vh;
-    /* position: fixed; */
     background-attachment: fixed;
 
 }
 
 .subscribe-section2 {
-    background: url(Images/home\ \(6\).jpg) no-repeat;
+    background: url(Images/Addvertising\ 2.jpg) no-repeat;
     background-size: cover;
     height: 50vh;
-    /* position: fixed; */
     background-attachment: fixed;
 
 }
-button{
-    /* background: pink !important; */
-    border: 1px solid pink !important;
-}
 
-button:hover{
-    background: pink !important;
-    border: 1px solid pink;
-}
+
 
 /* <!------------------------------------ Blog section start here----------------- -------------------> */
 .bolg-section img {
     height: 250px;
 }
 
-
-
-
 /*-------------------------------- Here the Footer section is strat ------------------------------ */
-
 footer {
     background-color: rgb(11, 11, 11);
     height: 50%;
@@ -385,8 +619,6 @@ footer {
 
 }
 
-
-
 .copywrite {
     color: rgba(232, 232, 232, 0.815);
     padding-bottom: 2%;
@@ -395,7 +627,137 @@ footer {
 }
 
 
+/* <!----------------------------------------- Product details page css start here---------------------------------------------> */
+.Product-details-page-header .header-navigation {
+    background: pink;
+}
 
+.Product-details .main-img img {
+    /* height: 400px; */
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.Product-details .main-img img:hover {
+    cursor: pointer !important;
+}
+
+.Product-details .main-img div span {
+    position: absolute;
+    right: 25px;
+    border-radius: 50%;
+}
+
+.Product-details button a {
+    text-decoration: none;
+    color: white;
+}
+
+.product-quantity {
+    /* border: 1px solid gainsboro; */
+    width: 48.5%;
+}
+
+.product-quantity :where(input, button) {
+    border: none;
+    outline: none;
+    font-size: 0.999rem;
+}
+
+.product-quantity button {
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.product-quantity button:focus {
+    outline: none !important;
+    border: none !important;
+
+}
+
+.product-quantity button:hover {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+
+.Product-details .buy-now-btn {
+    background: red;
+}
+
+.Product-details .add-card-btn {
+    background: rgb(255, 226, 61);
+    color: rgb(3, 3, 3);
+}
+
+.Product-details .buy-now-btn a {
+    color: white !important;
+}
+
+.Product-details .add-card-btn a {
+    color: rgb(3, 3, 3) !important;
+}
+
+
+.Product-sub-list img {
+    cursor: pointer;
+}
+
+
+.product-description ul {
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.product-description ul {
+    list-style: none;
+    cursor: pointer;
+}
+
+.product-description ul li {
+    padding: 3px;
+    margin: 5px;
+}
+
+.product-description ul li:hover {
+    color: rgb(98, 156, 255);
+}
+
+.Customer-review-form input {
+    border: 1px solid gray;
+    outline: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+    width: 420px;
+}
+
+.Customer-review-form button {
+    padding: 5px 10px;
+    background: rgb(255, 226, 160);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Customer-review-form button:hover {
+    background: rgb(15, 15, 15);
+    color: rgb(224, 255, 232);
+}
+
+.Customer-review-form textarea {
+    padding: 5px 10px;
+    width: 420px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.Customer-review-detail img {
+    height: 200px;
+    width: 300px;
+    border-radius: 5px;
+}
 
 /* <!----------------------------------------- Shoping page css start here---------------------------------------------> */
 
@@ -405,46 +767,353 @@ footer {
     background-size: 100% 100%;
 }
 
-.shoping-page-header-content {
 
-
-    /*--------------------------- header contents ---------------------------*/
-
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    height: 100vh;
-    /* padding-top: 10rem; */
-    /* padding-bottom: 10rem; */
+.shoping-page-header .logo span {
+    color: black;
+    background: #ffafaf;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 80%;
+    left: 23%;
 }
 
-.header-text {
+.shoping-page-header-content .header-text,
+.blog-page-header-content .header-text,
+.about-page-header-content .header-text,
+.contact-page-header-content .header-text {
     width: 50%;
     text-align: center;
-    /* background: rgba(0, 0, 0, 0.212); */
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 2%;
-
 }
 
-.header-content h1 {
+.shoping-page-header-content h1,
+.blog-page-header-content h1,
+.about-page-header-content h1,
+.contact-page-header-content h1 {
     font-size: 2.8rem;
-    /* font-weight: 800; */
-    font-family: 'Roboto Mono', monospace;
-    font-family: 'Source Code Pro', monospace;
     font-family: 'Recursive', sans-serif;
 }
 
-.header-content h4 {
-    color: rgb(102, 102, 102);
-    font-size: 1em;
-
-}
-
-.header-content .span {
+.shoping-page-header-content .span,
+.blog-page-header-content .span,
+.about-page-header-content .span,
+.contact-page-header-content .span {
     color: var(--green);
     font-size: 1em;
+}
+
+.shoping-page-header-content p,
+.blog-page-header-content p,
+.about-page-header-content p,
+.contact-page-header-content p {
+    color: white;
+    font-size: 1em;
+}
+
+.category-navbar button {
+    background: white !important;
+    color: #000000;
+    border: 1px solid black;
+}
+
+.category-navbar button:hover {
+    background: #ffa2bb !important;
+    color: #ffffff;
+}
+
+/* <!----------------------------------------- Blog page css start here---------------------------------------------> */
+.blog-page-header {
+    background: url(Images/home\ \(3\).jpg) no-repeat;
+    height: 50vh;
+    background-size: 100% 100%;
+}
+
+.blog-page-header .logo span,
+.contact-page-header .logo span {
+    color: black;
+    background: rgb(255, 208, 215);
+}
+
+/* <!----------------------------------------- about us page css start here---------------------------------------------> */
+/* --------------------------------------about number-bar-------------------------------------- */
+.about-number-item {
+    cursor: pointer;
+}
+
+.About-service-icon i {
+    font-size: 5rem;
+    transition: all 0.5s;
+}
+
+.about-number-list .about-number-item>div {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+}
+
+.about-number-list .about-number-item>div:hover {
+    box-shadow: 0px 0px 10px rgb(2, 2, 2);
+    transform: scale(1.010);
+    background: rgb(255, 255, 255);
+}
+
+.about-number-item div h5 {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.about-number-item div p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* <!----------------------------------------- contact  page css start here---------------------------------------------> */
+.contact-page-header {
+    background: url(Images/home\ \(3\).jpg) no-repeat;
+    height: 50vh;
+    object-fit: cover;
+    background-size: 100% 100%;
+}
+
+.contact-container {
+    width: 90%;
+    margin: auto;
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    background: url(Images/home\ \(7\).jpg) no-repeat;
+    background-size: cover;
+    padding: 5%;
+}
+
+/* .user-form h2 {
+    background: #6fd6ff;
+} */
+
+.user-form input {
+    width: 80%;
+    padding: 4px 20px;
+    outline: none;
+    /* border: none; */
+    /* margin-top: 1em; */
+    background: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.user-form form {
+    position: relative;
+    overflow: hidden;
+}
+
+.user-form form label {
+    position: relative;
+    left: 22px;
+    top: 37px;
+}
+
+.user-form form label:hover {
+    color: white;
+}
+
+.user-form label:focus {
+    /* position: relative;
+    left: 22px;
+    top: 17px; */
+    color: red;
+}
+
+
+.user-form [type=textarea]::placeholder {
+    color: rgb(124, 124, 124);
+}
+
+.user-form textarea {
+    /* margin-top: 3%; */
+    background: none;
+    border: 1px solid rgb(255, 255, 255);
+    width: 80%;
+    padding: 4px 20px;
+    border-radius: 5px;
+}
+
+.user-form textarea:focus {
+    outline: none;
+}
+
+.user-form .btn {
+    border: 1px solid rgb(253, 253, 253);
+    background: #ebebeb;
+    margin-top: 5%;
+    outline: none;
+}
+
+/* .user-form input[type=submit]:focus {
+    outline: none !important;
+} */
+
+.user-form .btn:hover {
+    border-radius: 5px;
+    background: rgb(11, 11, 11);
+    color: #fff;
+}
+
+
+
+/* ### -------------------------##########--- AFTER LOGIN PAGE HERE ---------------------##########------- ### */
+
+.profile-page-body {
+    background: #ececec;
+}
+
+.profile-navbar {
+    background: pink;
+}
+
+/*----------------------------------------- left section-----------------------------------------*/
+.after-login-nav-acc img {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-nav-user-icon,
+.after-login-page-head {
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+}
+
+
+.profile-nav-user-list a,
+.after-login-profile-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.profile-nav-user-list li,
+.after-login-profile-list li {
+    padding: 5px 10px;
+    margin: 5px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+
+.profile-nav-user-list li:hover,
+.after-login-profile-list li:hover {
+    background: #000;
+    color: white;
+    border-radius: 3px;
+}
+
+.profile-nav-user-list li i,
+.after-login-profile-list li i {
+    color: rgb(96, 136, 255);
+}
+
+
+/*------------- left user img  and list start-------------*/
+.user-profile img {
+    height: 50px;
+    width: 50px;
+}
+
+.profile-left-nav-list li {
+    font-size: 1rem;
+    font-weight: 600;
+    /* font-family:'Courier New', Courier, monospace; */
+    font-family: 'Recursive', sans-serif;
+    transition: all 0.2s;
+}
+
+.profile-left-nav-list li:hover {
+    background: #525252;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.profile-left-nav-list li:hover i {
+    color: rgb(115, 171, 249);
+}
+
+.profile-left-nav-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.profile-left-nav-list a i {
+    color: rgb(96, 136, 255);
+    font-size: 1.5rem;
+}
+
+.active1 {
+    background: #525252;
+    color: white;
+    border-radius: 10px;
 
 }
 
+/*----------------------------------------- right section-----------------------------------------*/
+
+.user-profile-right form input {
+    border: none;
+    outline: none !important;
+    border: 1px solid rgb(180, 180, 180);
+    /* background: #000; */
+}
+
+/*-----------------------------------------Wishlist page right section-----------------------------------------*/
+
+/* .wishlist-page-right {} */
+
+
+.wishlist-page-right img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.wishlist-list img {
+    object-fit: cover;
+
+}
+
+.wishlist-list div>i {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+/*-----------------------------------------Order page right section-----------------------------------------*/
+
+.Order-page-right img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+
+}
+
+.Order-page-right input {
+    width: 80%;
+    padding: 3px 15px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.Order-page-right div>i {
+    font-size: 1.2rem;
+
+}
+
+.Order-page-right div>i:hover {
+    background: #000;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
